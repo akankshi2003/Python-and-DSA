@@ -26,8 +26,10 @@ if __name__ == "__main__":
     obj = Solution()
     i=0
     candies=[]
-    while i!=-1:
-        i = int(input(f"Enter number of candies child {i} (Enter -1 to stop)"))
+    while True:
+        x = int(input("Enter integers (To stop : enter -1) : "))
+        if x == -1:
+            break
         candies.append(i)
-    extra = "Enter the number of extracandies : "
+    extra = int(input("Enter the number of extracandies : "))
     print(obj.kidsWithCandies(candies, extra))  
